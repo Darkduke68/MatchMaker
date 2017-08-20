@@ -60,7 +60,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
 
 ]
 
@@ -143,3 +143,7 @@ MEDIA_URL = '/media/'
 
 
 LOGIN_REDIRECT_URL = '/'
+
+
+AVATAR_AUTO_GENERATE_SIZES = (1000,)
+AVATAR_MAX_SIZE = 2 * 1024 * 1024

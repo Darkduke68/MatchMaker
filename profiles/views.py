@@ -8,7 +8,7 @@ def profile_update(request):
         form = ProfileUpdateForm(request.POST, instance=request.user)
         if form.is_valid():
             form.save()
-            redirect('profile')
+            return redirect('profile')
         else:
             return render(request, 'profiles/update.html', {'form': form})
     else:
@@ -18,3 +18,9 @@ def profile_update(request):
             'user': request.user,
         }
         return render(request, 'profiles/update.html', context)
+
+
+def profile_get(request):
+    if request.method == 'GET':
+        return render(request, 'profiles/profile_card.html', {'user': request.user})
+    return redirect('home')
