@@ -1,5 +1,7 @@
 crispy==0.2.0
 Django==1.11.4
+django-appconf==1.0.2
+django-avatar==4.0.0
 django-crispy-forms==1.6.1
 olefile==0.44
 Pillow==4.2.1

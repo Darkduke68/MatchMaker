@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # third party
     'crispy_forms',
+    'avatar',
 
     # customized app
     'home',

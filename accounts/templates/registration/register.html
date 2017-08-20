@@ -9,7 +9,7 @@
 
 {% block content %}
   <div class="container wrapper">
-    <form class="form-horizontal" method="POST" action="{% url 'register' %}">
+    <form class="form-signin form-horizontal" method="POST" action="{% url 'register' %}">
       {% csrf_token %}
       <div class="row">
         <div class="col-md-3"></div>
