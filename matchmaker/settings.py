@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'avatar',
 
     # customized app
+    'base',
     'home',
     'accounts',
 
