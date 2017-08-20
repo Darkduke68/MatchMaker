@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74e9d00c-0d06-45b7-9edf-7c560a9d22dc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profiles/views.py" afterPath="$PROJECT_DIR$/profiles/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/templates/registration/login.html" afterPath="$PROJECT_DIR$/accounts/templates/registration/login.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,11 +38,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matchmaker/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1177">
-              <caret line="145" column="0" lean-forward="true" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+            <state relative-caret-position="303">
+              <caret line="99" column="1" lean-forward="true" selection-start-line="99" selection-start-column="1" selection-end-line="99" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/accounts/templates/registration/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="589">
+              <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -85,17 +95,10 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/accounts/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+            <state relative-caret-position="171">
+              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lone-echo.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/media/avatars/darkduke68/resized/256/lone-echo.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
           </provider>
         </entry>
       </file>
@@ -160,7 +163,6 @@
         <option value="$PROJECT_DIR$/profiles/templates/profiles/get.html" />
         <option value="$PROJECT_DIR$/profiles/urls.py" />
         <option value="$PROJECT_DIR$/profiles/templates/profiles/profile_card.css" />
-        <option value="$PROJECT_DIR$/accounts/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/accounts/templates/registration/register.html" />
         <option value="$PROJECT_DIR$/accounts/templates/registration/logged_out.html" />
         <option value="$PROJECT_DIR$/profiles/templates/profiles/profile_card.html" />
@@ -169,6 +171,7 @@
         <option value="$PROJECT_DIR$/profiles/views.py" />
         <option value="$PROJECT_DIR$/accounts/urls.py" />
         <option value="$PROJECT_DIR$/matchmaker/settings.py" />
+        <option value="$PROJECT_DIR$/accounts/templates/registration/login.html" />
       </list>
     </option>
   </component>
@@ -180,7 +183,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1163" />
+    <option name="width" value="1934" />
     <option name="height" value="1413" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -851,7 +854,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1163" height="1413" extended-state="0" />
+    <frame x="0" y="23" width="1934" height="1413" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -861,7 +864,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296131" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20636286" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12409514" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296131" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1038,14 +1041,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/templates/registration/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="39" column="14" lean-forward="false" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/accounts/templates/registration/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -1092,16 +1087,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/accounts/templates/registration/logged_out.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -1134,14 +1119,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/profiles/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -1154,8 +1131,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/matchmaker/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1177">
-          <caret line="145" column="0" lean-forward="true" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+        <state relative-caret-position="303">
+          <caret line="99" column="1" lean-forward="true" selection-start-line="99" selection-start-column="1" selection-end-line="99" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/templates/registration/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
           <folding />
         </state>
       </provider>
