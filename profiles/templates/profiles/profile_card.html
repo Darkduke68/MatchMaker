@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block content %}
-  <div class="container">
+  <div class="container profile-font">
     <div class="row mb-5">
       <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
         <div class="card card-inverse card-info">
@@ -17,14 +17,14 @@
             <figure class="profile profile-inline">
               {% avatar user %}
             </figure>
-            <h4 class="card-title">Tawshif Ahsan Khan</h4>
+            <h4 class="card-title">{{ user.first_name }} {{ user.last_name }}</h4>
             <div class="card-text">
-              Tawshif is a web designer living in Bangladesh.
+              {{ user.email }}
             </div>
           </div>
           <div class="card-footer">
             <small>Last updated 3 mins ago</small>
-            <button class="btn btn-info float-right btn-sm">Follow</button>
+            <button class="btn btn-info float-right btn-sm">Like</button>
           </div>
         </div>
       </div>

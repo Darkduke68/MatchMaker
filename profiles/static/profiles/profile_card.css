@@ -1,14 +1,14 @@
-html {
+.profile-font {
     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
     font-size: 14px;
 }
 
-h5 {
-    font-size: 1.28571429em;
-    font-weight: 700;
-    line-height: 1.2857em;
-    margin: 0;
-}
+/*h5 {*/
+    /*font-size: 1.28571429em;*/
+    /*font-weight: 700;*/
+    /*line-height: 1.2857em;*/
+    /*margin: 0;*/
+/*}*/
 
 .card {
     font-size: 1em;
