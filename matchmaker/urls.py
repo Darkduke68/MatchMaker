@@ -25,6 +25,8 @@ urlpatterns = [
     url(r'^$', HomeView.as_view(), name='home'),
     url(r'^accounts/', include('accounts.urls')),
     url(r'^profile/', include('profiles.urls')),
+    url(r'^questions/', include('questions.urls')),
+    
 ]
 
 if settings.DEBUG is True:
