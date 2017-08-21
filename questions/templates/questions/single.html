@@ -1,0 +1,6 @@
+{% extends 'home/home.html' %}
+{% load staticfiles %}
+
+{% block content %}
+  {% include "questions/user_response.html" with instance=instance form=form %}
+{% endblock %}

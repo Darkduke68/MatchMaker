@@ -1,6 +1,8 @@
 from django.conf.urls import url
-from .views import question
+from .views import questions, question_single
 
 urlpatterns = [
-    url(r'^$', question, name='question')
+    url(r'^$', questions, name='questions'),
+    url(r'^(?P<pk>\d+)/$', question_single, name='question_single'),
+
 ]

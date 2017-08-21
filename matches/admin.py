@@ -1,5 +1,5 @@
 from django.contrib import admin
 
-from .models import PositionMatch
-
-admin.site.register(PositionMatch)
+# from .models import PositionMatch
+#
+# admin.site.register(PositionMatch)

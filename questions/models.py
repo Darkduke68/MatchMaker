@@ -59,7 +59,7 @@ class Answer(models.Model):
 # ====================================
 
 
-LEVELS = (
+IMPORTANCE_LEVELS = (
     ('Mandatory', 'Mandatory'),
     ('Very Important', 'Very Important'),
     ('Somewhat Important', 'Somewhat Important'),
@@ -73,10 +73,10 @@ class UserAnswer(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
     question = models.ForeignKey(Question)
     my_answer = models.ForeignKey(Answer, related_name='user_answer')
-    my_answer_importance = models.CharField(max_length=50, choices=LEVELS)
+    my_answer_importance = models.CharField(max_length=50, choices=IMPORTANCE_LEVELS)
     my_points = models.IntegerField(default=-1)
     their_answer = models.ForeignKey(Answer, null=True, blank=True, related_name='match_answer')
-    their_importance = models.CharField(max_length=50, choices=LEVELS)
+    their_importance = models.CharField(max_length=50, choices=IMPORTANCE_LEVELS)
     their_points = models.IntegerField(default=-1)
     created = models.DateTimeField(auto_now_add=True, auto_now=False)
     modified = models.DateTimeField(auto_now_add=False, auto_now=True)

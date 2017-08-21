@@ -1,20 +1,14 @@
-from django.contrib.auth.models import User
-
 import datetime
 from decimal import Decimal
 
-from django.conf import settings
-from django.core.urlresolvers import reverse
 from django.db import models
-
+from django.contrib.auth.models import User
 from django.utils import timezone
 
-from jobs.models import Job, Employer, Location
+# from jobs.models import Job, Employer, Location
 
 from .signals import user_matches_update
 from .utils import calculate_match
-
-User = settings.AUTH_USER_MODEL
 
 
 # ====================================
