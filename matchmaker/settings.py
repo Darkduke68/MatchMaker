@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'crispy_forms',
     'avatar',
 
+    # for jquery
+    'jquery',
+
     # customized app
     'base',
     'home',

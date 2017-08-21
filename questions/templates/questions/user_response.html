@@ -2,7 +2,7 @@
 {% load staticfiles %}
 
 {% block content %}
-  <div class='{% if center_text %}text-center{% endif %}'>
+  <div class='{% if center_text %}text-center{% endif %} container'>
     <form method='POST' action='{% url "question_single" pk=instance.id %}'>
       {% csrf_token %}
       {{ form.errors }}

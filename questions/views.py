@@ -79,4 +79,4 @@ def questions(request):
         next_q_instance = next_questions.first()
         return redirect("question_single", pk=next_q_instance.id)
     else:
-        return redirect("profile")
+        return render(request, "questions/countdown.html", {})

@@ -2,5 +2,15 @@
 
 {% load staticfiles %}
 
-{% block content %}
+{% block css %}
+  {{ block.super }}
 {% endblock %}
+
+{% block content %}
+  {{ block.super }}
+{% endblock %}
+
+{% block script %}
+  {{ block.super }}
+{% endblock %}
+

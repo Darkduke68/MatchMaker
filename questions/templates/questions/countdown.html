@@ -1,0 +1,24 @@
+{% extends 'home/home.html' %}
+{% load staticfiles %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'questions/css/countdown.css' %}">
+{% endblock %}
+
+{% block content %}
+  <div class="container wrapper" id="countdown">
+    <div class="bs-calltoaction bs-calltoaction-primary">
+      <div class="row">
+        <div class="col-sm-12 cta-contents">
+          <h6 class="cta-title">Your have answered all the questions. Redirecting to Profile in <span id="message"></span></h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block script %}
+  {{ block.super }}
+  <script src="{% static 'questions/js/countdown.js' %}"></script>
+{% endblock %}
