@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'dashboards',
     'profiles',
     'questions',
+    'matches',
+
 ]
 
 MIDDLEWARE = [
