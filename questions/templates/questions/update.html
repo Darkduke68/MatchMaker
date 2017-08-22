@@ -1,0 +1,35 @@
+{% extends 'home/home.html' %}
+{% load staticfiles %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'questions/css/update.css' %}">
+{% endblock %}
+
+{% block content %}
+  <div class="container wrapper">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card card-outline-info mb-3">
+          <h5 class="card-header">
+            Questions I Have Answered
+          </h5>
+          <ul class="list-group list-group-flush">
+            {% for question in questions %}
+              <li class="list-group-item">
+                <div class="row">
+                  <div class="col-md-10">
+                    {{ question.text }}
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-1 text-right">
+                    <a class="btn btn-primary btn-sm" href="{% url 'question-single' pk=question.id %}">Edit</a>
+                  </div>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -4,7 +4,7 @@
 {% load avatar_tags %}
 
 {% block css %}
-  <link rel="stylesheet" href="{% static 'profiles/css/profile_main.css' %}">
+  <link rel="stylesheet" href="{% static 'profiles/css/main.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -17,7 +17,9 @@
           </a>
           <h3>{{ user.first_name }} {{ user.last_name }}</h3>
           <em>Click my image to know more</em><br>
+          <br>
           <a class="btn btn-primary btn-sm" href="{% url 'profile-update' %}">Edit Profile</a>
+          <a class="btn btn-primary btn-sm" href="{% url 'questions-update' %}">Edit Questions</a>
         </div>
     </div>
 

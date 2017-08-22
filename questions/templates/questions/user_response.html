@@ -6,11 +6,9 @@
 {% endblock %}
 
 {% block content %}
-  <div class='{% if center_text %}text-center{% endif %} container'>
-    <form method='POST' action='{% url "question_single" pk=instance.id %}'>
+  <div class='container'>
+    <form method='POST' action='{% url "question-single" pk=instance.id %}'>
       {% csrf_token %}
-{#      {{ form.errors }}#}
-
       <!-- Your answer -->
       <input type='hidden' name='question_id' value='{{ instance.id }}' />
 
@@ -35,6 +33,9 @@
 
             <div class="quiz" id="quiz" data-toggle="buttons">
               <h5>Choose your answer here</h5>
+              {% if form.errors.answer_id %}
+                <p class="text-danger">You must choose an answer here.</p>
+              {% endif %}
               {% for ans in instance.answer_set.all %}
                 <label class="element-animation{{ forloop.counter }} btn btn-sm btn-info btn-block">
                   <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
@@ -48,7 +49,10 @@
             <hr>
 
             <div class="quiz" id="quiz" data-toggle="buttons">
-              <h5>Choose your preferred answer of your match</h5>
+              <h5>Choose preferred answer for your match</h5>
+              {% if form.errors.their_answer_id %}
+                <p class="text-danger">You must choose an answer here.</p>
+              {% endif %}
               {% for ans in instance.answer_set.all %}
                 <label class="element-animation{{ forloop.counter }} btn btn-sm btn-info btn-block">
                   <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>

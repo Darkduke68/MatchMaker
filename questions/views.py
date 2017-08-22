@@ -1,9 +1,8 @@
 from django.contrib import messages
+from django.forms import formset_factory
 from django.http import Http404
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
-
-# Create your views here.
 
 from matches.signals import user_matches_update
 
@@ -20,13 +19,13 @@ def question_single(request, pk):
     # get or create a UserAnswer instance for that question
     try:
         user_answer = UserAnswer.objects.get(user=request.user, question=instance)
-        updated_q = True
+        updated = True
     except UserAnswer.DoesNotExist:
         user_answer = UserAnswer()
-        updated_q = False
+        updated = False
     except UserAnswer.MultipleObjectsReturned:
         user_answer = UserAnswer.objects.filter(user=request.user, question=instance)[0]
-        updated_q = True
+        updated = True
 
     form = UserResponseForm(request.POST or None)
     if form.is_valid():
@@ -56,16 +55,18 @@ def question_single(request, pk):
         user_answer.save()
         user_matches_update.send(user=request.user, sender=user_answer.__class__)
 
-        if updated_q:
+        if updated:
             messages.success(request, "Updated successfully.", extra_tags='safe updated')
+            return redirect('questions-update')
         else:
             messages.success(request, "Saved successfully.")
-        return redirect('questions')
-    print(form)
+            return redirect('questions')
+
     context = {
         "form": form,
         "instance": instance,
         "user_answer": user_answer,
+        "updated": updated,
     }
     return render(request, "questions/single.html", context)
 
@@ -77,6 +78,18 @@ def questions(request):
     next_questions = Question.objects.unanswered(request.user).order_by("?")
     if next_questions.count() > 0:
         next_q_instance = next_questions.first()
-        return redirect("question_single", pk=next_q_instance.id)
+        return redirect("question-single", pk=next_q_instance.id)
     else:
         return render(request, "questions/countdown.html", {})
+
+
+@login_required()
+def questions_update(request):
+    """Endpoint to update multiple instances of user answers."""
+
+    answered = Question.objects.answered(request.user)
+    print(answered.count())
+    return render(request, "questions/update.html", {'questions': answered})
+
+
+

@@ -15,9 +15,13 @@ class QuestionManager(models.Manager):
 
     def unanswered(self, user):
         """Return unanswered questions query set."""
-        q1 = Q(useranswer__user=user)
-        qs = self.exclude(q1)
+        ans_queries = Q(useranswer__user=user)
+        qs = self.exclude(ans_queries)
         return qs
+
+    def answered(self, user):
+        """Return answered questions."""
+        return self.filter(Q(useranswer__user=user))
 
 
 class Question(models.Model):
