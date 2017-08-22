@@ -26,7 +26,7 @@
           <div class="form-group">
             <div class="input-group mb-2 mr-sm-2 mb-sm-0">
               <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
-              <input type="text" name="first_name" class="form-control" id="first-name" placeholder="John" required autofocus>
+              <input type="text" name="first_name" class="form-control" id="first-name" value="{{ form.first_name.value|default_if_none:"" }}" placeholder="John" required autofocus>
             </div>
           </div>
         </div>
@@ -46,7 +46,7 @@
           <div class="form-group">
             <div class="input-group mb-2 mr-sm-2 mb-sm-0">
               <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
-              <input type="text" name="last_name" class="form-control" id="last-name" placeholder="Doe" required autofocus>
+              <input type="text" name="last_name" class="form-control" id="last-name" value="{{ form.last_name.value|default_if_none:"" }}" placeholder="Doe" required autofocus>
             </div>
           </div>
         </div>
@@ -66,7 +66,7 @@
           <div class="form-group">
             <div class="input-group mb-2 mr-sm-2 mb-sm-0">
               <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
-              <input type="text" name="username" class="form-control" id="username" placeholder="Username" required autofocus>
+              <input type="text" name="username" class="form-control" id="username" value="{{ form.username.value|default_if_none:"" }}" placeholder="Username" required autofocus>
             </div>
           </div>
         </div>
@@ -86,7 +86,7 @@
           <div class="form-group">
             <div class="input-group mb-2 mr-sm-2 mb-sm-0">
               <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
-              <input type="text" name="email" class="form-control" id="email" placeholder="you@example.com" required autofocus>
+              <input type="text" name="email" class="form-control" id="email" value="{{ form.email.value|default_if_none:"" }}" placeholder="you@example.com" required autofocus>
             </div>
           </div>
         </div>
