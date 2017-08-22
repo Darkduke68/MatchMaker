@@ -1,0 +1,54 @@
+{% extends 'home/home.html' %}
+
+{% load staticfiles %}
+{% load avatar_tags %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'profiles/css/profile_main.css' %}">
+{% endblock %}
+
+{% block content %}
+  <div class="container wrapper">
+    <div class="row">
+      <div class="col-md-4 mx-auto d-block">
+        <div class="text-center">
+          <a href="#aboutModal" data-toggle="modal" data-target="#myModal">
+            <img src="{% avatar_url user %}" name="aboutme" width="140" height="140" class="rounded-circle">
+          </a>
+          <h3>{{ user.first_name }} {{ user.last_name }}</h3>
+          <em>Click my image to know more</em><br>
+          <a class="btn btn-primary btn-sm" href="{% url 'profile-update' %}">Edit Profile</a>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">More About {{ user.first_name }}</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <img src="{% avatar_url user %}" name="aboutme" width="140" height="140" border="0" class="rounded-circle"></a>
+            <h3 class="media-heading">{{ user.first_name }} {{ user.last_name }}</h3>
+            <span><strong>Skills: </strong></span>
+            <span class="badge badge-pill badge-warning">HTML5/CSS</span>
+            <span class="badge badge-pill badge-info">Adobe CS 5.5</span>
+            <span class="badge badge-pill badge-info">Microsoft Office</span>
+            <span class="badge badge-pill badge-success">Windows XP, Vista, 7</span>
+            <hr>
+            <p class="text-left"><strong>Intro: </strong><br>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sem dui, tempor sit amet commodo a, vulputate vel tellus.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -10,9 +10,10 @@
     <div class="row">
       <div class="col-md-4">
         <figure>
-          {% avatar user %}
+          {% avatar user 256 %}
           <figcaption>
-            <a class="btn btn-sm" href="{% url 'avatar_change' %}" role="button">Edit</a>
+            <br>
+            <a class="btn btn-outline-primary btn-sm" href="{% url 'avatar_change' %}" role="button">Edit Profile Image</a>
           </figcaption>
         </figure>
 
@@ -20,7 +21,8 @@
       <form method="POST" action="{% url 'profile-update' %}">
         {% csrf_token %}
         {{ form | crispy }}
-        <button class="btn btn-primary" type="Submit">Submit</button>
+        <br>
+        <button class="btn btn-primary" type="Submit">Save</button>
       </form>
       <div class="col-md-4"></div>
     </div>

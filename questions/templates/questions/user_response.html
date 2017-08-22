@@ -1,48 +1,69 @@
 {% extends 'home/home.html' %}
 {% load staticfiles %}
 
+{% block css %}
+  <link rel="stylesheet" href="{% static 'questions/css/user_response.css' %}">
+{% endblock %}
+
 {% block content %}
   <div class='{% if center_text %}text-center{% endif %} container'>
     <form method='POST' action='{% url "question_single" pk=instance.id %}'>
       {% csrf_token %}
-      {{ form.errors }}
-      {% if title_size %}
-        <h{{ title_size }}>{{ instance.text }}</h{{ title_size }}>
-      {% else %}
-        <h1>{{ instance.text }}</h1>
-      {% endif %}
+{#      {{ form.errors }}#}
 
+      <!-- Your answer -->
       <input type='hidden' name='question_id' value='{{ instance.id }}' />
 
-      {% if title_size %}
-        <h{{ title_size|add:1 }}>Your Answer</h{{ title_size|add:1 }}>
-      {% else %}
-        <h3>Your answer</h3>
-      {% endif %}
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3><span class="label label-warning" id="qid">2</span>{{ instance.text }}</h3>
+          </div>
+          <div class="modal-body">
+            <div class="col-xs-3 col-xs-offset-5">
+              <div id="loadbar" style="display: none;">
+                <div class="blockG" id="rotateG_01"></div>
+                <div class="blockG" id="rotateG_02"></div>
+                <div class="blockG" id="rotateG_03"></div>
+                <div class="blockG" id="rotateG_04"></div>
+                <div class="blockG" id="rotateG_05"></div>
+                <div class="blockG" id="rotateG_06"></div>
+                <div class="blockG" id="rotateG_07"></div>
+                <div class="blockG" id="rotateG_08"></div>
+              </div>
+            </div>
 
-      {% for ans in instance.answer_set.all %}
-        <input type='radio' name='answer_id' value='{{ ans.id }}' {% if user_answer.my_answer.id == ans.id %}checked=checked{% endif %} /> {{ ans.text }} <br/>
-      {% endfor %}
+            <div class="quiz" id="quiz" data-toggle="buttons">
+              <h5>Choose your answer here</h5>
+              {% for ans in instance.answer_set.all %}
+                <label class="element-animation{{ forloop.counter }} btn btn-sm btn-info btn-block">
+                  <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                  <input type="radio" name="answer_id" value="{{ ans.id }}" {% if user_answer.my_answer.id == ans.id %}checked=checked{% endif %}>
+                  {{ ans.text }}
+                </label>
+              {% endfor %}
+              Importance: {{ form.importance_level }}
+            </div>
 
-      <br/>
-      Importance: {{ form.importance_level }}
+            <hr>
 
-
-      {% if title_size %}
-        <h{{ title_size|add:1 }}>Their Answer</h{{ title_size|add:1 }}>
-      {% else %}
-        <h3>Their Answer</h3>
-      {% endif %}
-      {% for ans in instance.answer_set.all %}
-        <input type='radio' name='their_answer_id' value='{{ ans.id }}' {% if user_answer.their_answer.id == ans.id %}checked=checked{% endif %} /> {{ ans.text }} <br/>
-      {% endfor %}
-      <input type='radio' name='their_answer_id' value='-1' {% if not user_answer.their_answer %} checked=checked {% endif %} /> Holds no importance <br/>
-
-
-      <br/>
-      Importance: {{ form.their_importance_level }} <br/><br/>
-
-      <input class='btn btn-primary' type='submit' value='Save and continue' />
+            <div class="quiz" id="quiz" data-toggle="buttons">
+              <h5>Choose your preferred answer of your match</h5>
+              {% for ans in instance.answer_set.all %}
+                <label class="element-animation{{ forloop.counter }} btn btn-sm btn-info btn-block">
+                  <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                  <input type="radio" name="their_answer_id" value="{{ ans.id }}" {% if user_answer.their_answer.id == ans.id %}checked=checked{% endif %}>
+                  {{ ans.text }}
+                </label>
+              {% endfor %}
+              Importance: {{ form.their_importance_level }}
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <input class='btn btn-primary' type='submit' value='Save and continue' />
+        </div>
+      </div>
 
     </form>
   </div>

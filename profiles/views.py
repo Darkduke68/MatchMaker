@@ -26,5 +26,5 @@ def profile_update(request):
 @login_required
 def profile_get(request):
     if request.method == 'GET':
-        return render(request, 'profiles/profile_card.html', {'user': request.user})
+        return render(request, 'profiles/main.html', {'user': request.user})
     return redirect('home')

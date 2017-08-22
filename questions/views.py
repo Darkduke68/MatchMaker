@@ -61,7 +61,7 @@ def question_single(request, pk):
         else:
             messages.success(request, "Saved successfully.")
         return redirect('questions')
-
+    print(form)
     context = {
         "form": form,
         "instance": instance,
