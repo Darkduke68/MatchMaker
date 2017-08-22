@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74e9d00c-0d06-45b7-9edf-7c560a9d22dc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/templates/registration/logged_out.html" afterPath="$PROJECT_DIR$/accounts/templates/registration/logged_out.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/templates/registration/login.html" afterPath="$PROJECT_DIR$/accounts/templates/registration/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/templates/registration/register.html" afterPath="$PROJECT_DIR$/accounts/templates/registration/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base/templates/base/index.html" afterPath="$PROJECT_DIR$/base/templates/base/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dashboards/templates/dashboards/main.html" afterPath="$PROJECT_DIR$/dashboards/templates/dashboards/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home/templates/home/home.html" afterPath="$PROJECT_DIR$/home/templates/home/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/matchmaker/settings.py" afterPath="$PROJECT_DIR$/matchmaker/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/matchmaker/urls.py" afterPath="$PROJECT_DIR$/matchmaker/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profiles/templates/profiles/main.html" afterPath="$PROJECT_DIR$/profiles/templates/profiles/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profiles/templates/profiles/update.html" afterPath="$PROJECT_DIR$/profiles/templates/profiles/update.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/questions/templates/questions/countdown.html" afterPath="$PROJECT_DIR$/questions/templates/questions/countdown.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/questions/templates/questions/single.html" afterPath="$PROJECT_DIR$/questions/templates/questions/single.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/questions/templates/questions/update.html" afterPath="$PROJECT_DIR$/questions/templates/questions/update.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/questions/templates/questions/user_response.html" afterPath="$PROJECT_DIR$/questions/templates/questions/user_response.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,17 +47,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/matchmaker/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="692">
-              <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+            <state relative-caret-position="475">
+              <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jon-snow.jpg" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jon-snow.jpg" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/media/avatars/john.snow/jon-snow.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
@@ -918,7 +904,7 @@
         <state relative-caret-position="540">
           <caret line="30" column="31" lean-forward="false" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#0#45#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1090,17 +1076,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/matchmaker/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="692">
-          <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/media/avatars/john.snow/jon-snow.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matchmaker/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
