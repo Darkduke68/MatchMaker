@@ -10,7 +10,7 @@
 
 {% block content %}
   <div class="container wrapper">
-    <h4>Check out these {{ matches|length }} matches for you:</h4>
+    <h4>Check out these {{ matches|length }} highest matches out of {{ total_user_cnt }} users:</h4>
     <hr>
     <div class="row">
     {% for user, percent in matches %}
