@@ -8,6 +8,55 @@
 
 {% block content %}
   {{ block.super }}
+  <!-- jumbotron -->
+  <div class="jumbotron" style="background-image: {% static 'home/img/jumbotron-log.jpg'%};">
+    <div class="container-fluid">
+	    <div class="row">
+		    <div class='col-sm-6'>
+          <h1>Welcome!</h1>
+          <h1>Let Find Your Perfect Match</h1>
+          <h5>This web is only for demo purpose. Have fun.</h5>
+          <p>
+            <a class="btn btn-lg btn-primary" href="{% url 'register' %}" role="button">Join Us &raquo;</a>
+          </p>
+        </div>
+		    <div class='col-sm-6 embed-responsive' >
+			    <iframe width="560" height="315" src="https://www.youtube.com/embed/LGmQFjtdr-I" allowfullscreen></iframe>
+ 		    </div>
+		  </div>
+	  </div>
+  </div>
+  <!-- footer content -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class='col-sm-4'>
+        <p class='lead text-center'>Django &amp; Bootstrap &amp; jQuery</p>
+        <img src='{% static "home/img/python-django-logo.jpg" %}' class='img-fluid' />
+      </div>
+      <div class="col-sm-1"></div>
+      <div class='col-sm-3'>
+        <p class='lead text-center'>Responsive, Mobile First
+          <br/>
+          <span class='fa-stack fa-lg fa-5x'>
+            <i class='fa fa-comment-o fa-stack-2x'></i>
+            <i style='color:yellow;' class="fa fa-bolt fa-stack-1x"></i>
+          </span>
+        </p>
+      </div>
+      <div class="col-sm-1"></div>
+      <div class='col-sm-3'>
+        <p class='lead text-center'>Open Source on GitHub<br/><br/>
+          <span class="fa-stack fa-lg fa-5x">
+            <i class="fa fa-circle-o-notch fa-stack-2x"></i>
+            <!-- <i class="fa fa-square-o fa-stack-2x"></i> -->
+            <i class="fa fa-github fa-stack-1x"></i>
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
 {% endblock %}
 
 {% block script %}
