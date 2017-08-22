@@ -105,7 +105,6 @@ class Match(models.Model):
 
     @property
     def percent(self):
-        print(self.match_decimal * Decimal(100))
         return str((self.match_decimal * Decimal(100)).quantize(Decimal('0.01')))
 
     def do_match(self):

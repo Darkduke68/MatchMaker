@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.shortcuts import Http404
 
 from profiles.forms import ProfileUpdateForm
+from matches.models import Match
 
 
 # Create your views here.
@@ -39,9 +40,11 @@ def profile_single(request, pk):
     except:
         user = None
     if user and request.method == 'GET':
+        match, created = Match.objects.get_or_create_match(user_a=request.user, user_b=user)
         context = {
             'curr_user': request.user,
             'view_user': user,
+            'match_percent': match.percent,
         }
         return render(request, 'profiles/main.html', context)
     return Http404

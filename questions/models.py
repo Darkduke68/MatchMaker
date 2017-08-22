@@ -41,7 +41,7 @@ class Question(models.Model):
         return self.text
 
     def __str__(self):
-        return self.text[:20]
+        return self.text[:40]
 
 
 class Answer(models.Model):
@@ -55,7 +55,7 @@ class Answer(models.Model):
     modified = models.DateTimeField(auto_now_add=False, auto_now=True)
 
     def __str__(self):
-        return self.text[:20]
+        return self.text[:40]
 
 
 # ====================================
@@ -86,14 +86,14 @@ class UserAnswer(models.Model):
     modified = models.DateTimeField(auto_now_add=False, auto_now=True)
 
     def __str__(self):
-        return self.my_answer.text[:20]
+        return self.my_answer.text[:40]
 
 
 def score_importance(importance_level):
     if importance_level == "Mandatory":
-        points = 300
+        points = 150
     elif importance_level == "Very Important":
-        points = 200
+        points = 100
     elif importance_level == "Somewhat Important":
         points = 50
     else:

@@ -19,6 +19,7 @@
 
           {% if curr_user != view_user %}
             <em>Click my image to know more</em><br>
+            <p class="text-info">{{ match_percent }}%</p>
             <br>
           {% else %}
             <a class="btn btn-primary btn-sm" href="{% url 'profile-update' %}">Edit Profile</a>

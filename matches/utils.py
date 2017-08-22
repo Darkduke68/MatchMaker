@@ -13,7 +13,7 @@ def calculate_match(user_a, user_b):
     question_set2 = Question.objects.filter(Q(useranswer__user=user_b))
     # return 0 if no question is answered for either user
     if question_set1.count() == 0 or question_set2.count() == 0:
-        return 0.0, 0
+        return Decimal(0.0), Decimal(0)
     question_set = (question_set1 | question_set2).distinct()
     a_points = 0
     b_points = 0
@@ -51,7 +51,7 @@ def calculate_match(user_a, user_b):
         match_percentage = (Decimal(a_decimal) * Decimal(b_decimal)) ** (1/Decimal(questions_in_common))
         return match_percentage, questions_in_common
     else:
-        return 0.0, 0
+        return Decimal(0.0), Decimal(0)
 
 
 
