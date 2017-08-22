@@ -65,7 +65,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 
 ]
 
@@ -152,3 +152,6 @@ LOGIN_REDIRECT_URL = '/dashboard/'
 
 AVATAR_AUTO_GENERATE_SIZES = (1000,)
 AVATAR_MAX_SIZE = 2 * 1024 * 1024
+
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
