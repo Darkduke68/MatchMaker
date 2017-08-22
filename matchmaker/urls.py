@@ -26,7 +26,7 @@ urlpatterns = [
     url(r'^accounts/', include('accounts.urls')),
     url(r'^profile/', include('profiles.urls')),
     url(r'^questions/', include('questions.urls')),
-    
+    url(r'^dashboard/', include('dashboards.urls')),
 ]
 
 if settings.DEBUG is True:

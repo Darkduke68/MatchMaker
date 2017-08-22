@@ -13,13 +13,17 @@
       <div class="col-md-4 mx-auto d-block">
         <div class="text-center">
           <a href="#aboutModal" data-toggle="modal" data-target="#myModal">
-            <img src="{% avatar_url user %}" name="aboutme" width="140" height="140" class="rounded-circle">
+            <img src="{% avatar_url view_user %}" name="aboutme" width="140" height="140" class="rounded-circle">
           </a>
-          <h3>{{ user.first_name }} {{ user.last_name }}</h3>
-          <em>Click my image to know more</em><br>
-          <br>
-          <a class="btn btn-primary btn-sm" href="{% url 'profile-update' %}">Edit Profile</a>
-          <a class="btn btn-primary btn-sm" href="{% url 'questions-update' %}">Edit Questions</a>
+          <h3>{{ view_user.first_name }} {{ view_user.last_name }}</h3>
+
+          {% if curr_user != view_user %}
+            <em>Click my image to know more</em><br>
+            <br>
+          {% else %}
+            <a class="btn btn-primary btn-sm" href="{% url 'profile-update' %}">Edit Profile</a>
+            <a class="btn btn-primary btn-sm" href="{% url 'questions-update' %}">Edit Questions</a>
+          {% endif %}
         </div>
     </div>
 
@@ -28,14 +32,14 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title" id="myModalLabel">More About {{ user.first_name }}</h4>
+            <h4 class="modal-title" id="myModalLabel">More About {{ view_user.first_name }}</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body text-center">
-            <img src="{% avatar_url user %}" name="aboutme" width="140" height="140" border="0" class="rounded-circle"></a>
-            <h3 class="media-heading">{{ user.first_name }} {{ user.last_name }}</h3>
+            <img src="{% avatar_url view_user %}" name="aboutme" width="140" height="140" border="0" class="rounded-circle"></a>
+            <h3 class="media-heading">{{ view_user.first_name }} {{ view_user.last_name }}</h3>
             <span><strong>Skills: </strong></span>
             <span class="badge badge-pill badge-warning">HTML5/CSS</span>
             <span class="badge badge-pill badge-info">Adobe CS 5.5</span>

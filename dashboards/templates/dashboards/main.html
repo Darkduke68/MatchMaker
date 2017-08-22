@@ -1,16 +1,20 @@
 {% extends 'home/home.html' %}
-
 {% load staticfiles %}
 {% load avatar_tags %}
 
 {% block css %}
-  <link rel="stylesheet" href="{% static 'profiles/css/profile_card.css' %}">
+  <link rel="stylesheet" href="{% static 'dashboards/css/card.css' %}">
+  <link rel="stylesheet" href="{% static 'dashboards/css/main.css' %}">
 {% endblock %}
 
+
 {% block content %}
-  <div class="container profile-font">
-    <div class="row mb-5">
-      <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+  <div class="container wrapper">
+    <h4>Check out these {{ matches|length }} matches for you:</h4>
+    <hr>
+    <div class="row">
+    {% for user, percent in matches %}
+      <div class="col-md-3">
         <div class="card card-inverse card-info">
           <img class="card-img-top img-thumbnail" src="{% avatar_url user %}">
           <div class="card-block">
@@ -23,12 +27,18 @@
             </div>
           </div>
           <div class="card-footer">
-            <small>Last updated 3 mins ago</small>
-            <button class="btn btn-info float-right btn-sm">Like</button>
+            <small>Match: </small><small class="text-info">{{ percent }}%</small>
+            <a class="btn btn-info float-right btn-sm" href="{% url 'profile-single' pk=user.id %}">View</a>
           </div>
         </div>
       </div>
+
+      {% if forloop.counter|divisibleby:4 %}
     </div>
+    <br>
+    <div class="row">
+      {% endif %}
+    {% endfor %}
   </div>
 
 {% endblock %}
