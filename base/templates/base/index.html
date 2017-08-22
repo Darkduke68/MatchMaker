@@ -33,14 +33,10 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
           </li>
-          {% if not request.user.is_authenticated %}
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-          {% else %}
+          {% if request.user.is_authenticated %}
             <li class="nav-item">
               <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
             </li>

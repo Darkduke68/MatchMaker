@@ -62,11 +62,14 @@ def question_single(request, pk):
             messages.success(request, "Saved successfully.")
             return redirect('questions')
 
+    answered = Question.objects.answered(request.user)
+    idxstr = '{}/{}'.format(answered.count()+1, Question.objects.all().count())
     context = {
         "form": form,
         "instance": instance,
         "user_answer": user_answer,
         "updated": updated,
+        "idxstr": idxstr,
     }
     return render(request, "questions/single.html", context)
 
@@ -76,6 +79,7 @@ def questions(request):
     """Endpoint to handle user request to answer questions."""
 
     next_questions = Question.objects.unanswered(request.user).order_by("?")
+
     if next_questions.count() > 0:
         next_q_instance = next_questions.first()
         return redirect("question-single", pk=next_q_instance.id)
