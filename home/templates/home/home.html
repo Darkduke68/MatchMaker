@@ -10,12 +10,13 @@
   {{ block.super }}
   <!-- jumbotron -->
   <div class="jumbotron" style="background-image: {% static 'home/img/jumbotron-log.jpg'%};">
-    <div class="container-fluid">
+    <div class="container">
 	    <div class="row">
 		    <div class='col-sm-6'>
           <h1>Welcome!</h1>
           <h1>Lets Find Your Perfect Match</h1>
-          <h5>This web is only for demo purpose. Have fun.</h5>
+          <h5>This web is only for demo purpose.</h5>
+          <h5>Have fun.</h5>
           <p>
             <a class="btn btn-lg btn-primary" href="{% url 'register' %}" role="button">Join Us &raquo;</a>
           </p>
